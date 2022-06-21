@@ -1,0 +1,13 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    code:<input type="text" id="code" name="code" formControlName="code"><br>
+    name:<input type="text" id="name" name="name" formControlName="name"><br>
+    order:<select id="order"  formControlName="order">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    status:<input type="checkbox" id="status"  formControlName="status"   (ngModelChange)="status = $event ? 1 : 0" [ngModel]="status"/>
+        <input type="hidden" formControlName="id" name="id"/>
+    <button type="submit">Submit</button>
+</form>

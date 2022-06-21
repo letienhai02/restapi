@@ -1,0 +1,20 @@
+<table bor>
+    <thead>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Order</th>
+        <th>Status</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of lstValue[0]" >
+            <td >{{item.c_code}}</td>
+            <td >{{item.c_name}}</td>
+            <td >{{item.c_order}}</td>
+            <td >{{item.c_status==1?'Active':'Deactive'}}</td>
+            <td ><a routerLink="/page1/{{item.id }}" style="margin-right: 10px;">Edit</a>
+                <button type="submit" (click)="delete(item.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
