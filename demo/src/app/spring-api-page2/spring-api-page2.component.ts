@@ -46,7 +46,6 @@ export class SpringApiPage2Component implements OnInit {
     if (this.addForm.controls['id'].value != "") {
       this.http.put('http://localhost:8080/api/categories/'+this.addForm.controls['id'].value, this.addForm.value).subscribe(res => {
         alert('succes')
-        console.log('success');
         this.router.navigate(['/spring-api'])
       }, err => {
         console.log(err);
